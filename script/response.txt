@@ -1,0 +1,4 @@
+*   **Video Number:** 7
+*   **Video Title:** Forms and input tags in HTML
+*   **Timestamp:** 0:00 - 0:30
+*   **Short explanation:** The video introduces what forms are and explains the input tag within forms, stating it's a very important element for submitting data from client to server.
