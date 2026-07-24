@@ -101,24 +101,31 @@ Final Answer
 ## Project Structure
 
 ```
-AI-Course-Assistant/
-
-│── videos/
-│── audio/
-│── transcripts/
-│── chunks/
-│── embeddings/
-
-│── video_to_audio.py
-│── audio_to_text.py
-│── text_to_chunks.py
-│── read_chunks.py
-│── process_chunks.py
-
-│── requirements.txt
-│── README.md
+AI-Course-Assistant
+│
+├── .github/
+│   └── workflows/
+│       └── python-app.yml
+│
+├── jsons/
+│
+├── newjsons/
+│
+├── script/
+│   ├── 01_video_to_voice.py
+│   ├── 02_audio_to_text.py
+│   ├── 03_text_to_chunks.py
+│   ├── 04_read_chunks.py
+│   ├── 05_process_chunks.py
+│   ├── 06_merge_chunks.py
+│   ├── embeddings.joblib
+│   ├── output.json
+│   ├── prompt.txt
+│   └── response.txt
+│
+├── README.md
+└── requirements.txt
 ```
-
 ---
 
 # How to Use
