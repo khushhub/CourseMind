@@ -199,11 +199,7 @@ The system performs the following operations:
 
 ---
 
-## Example
-
-==================================================
-AI Course Assistant
-==================================================
+## AI Course Assistant
 
 Question:
 Where is CSS taught?
