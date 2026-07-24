@@ -194,26 +194,38 @@ The system performs the following operations:
 
 ## Example
 
-### User Question
+==================================================
+AI Course Assistant
+==================================================
 
-```
-What is the purpose of the HTML input tag?
-```
+Question:
+Where is CSS taught?
 
-### Response
+Top Matching Results
 
-```
-Video Number : 07
+1.
+Video Number : 2
+Video Title  : Your First HTML Website
+Timestamp    : 14:10
+Explanation  : The instructor introduces CSS and explains that styling will be covered in upcoming lessons.
 
-Video Title : HTML Forms
+--------------------------------------------------
 
-Timestamp : 02:14 – 02:45
+2.
+Video Number : 4
+Video Title  : Heading, Paragraphs and Links
+Timestamp    : 17:08
+Explanation  : The instructor mentions that CSS will be used to style HTML elements.
 
-Answer:
+--------------------------------------------------
 
-The HTML input tag is used inside forms to collect user input. Different input types such as text, email, password, radio buttons, and checkboxes allow users to enter various kinds of data.
-```
+3.
+Video Number : 13
+Video Title  : Entities, Code Tag and More on HTML
+Timestamp    : 05:32
+Explanation  : Modern CSS topics are introduced as part of the course roadmap.
 
+==================================================
 ---
 
 ## Concepts Covered
