@@ -1,18 +1,271 @@
-# How to use this RAG AI Teaching assistant on your own data
-## Step 1 - Collect your videos
-Move all your video files to the videos folder
+# AI-Powered Course Assistant using Retrieval-Augmented Generation (RAG)
 
-## Step 2 - Convert to mp3
-Convert all the video files to mp3 by ruunning video_to_mp3 (video_to_voice.py)
+## Overview
 
-## Step 3 - Convert mp3 to json 
-Convert all the mp3 files to json by ruunning mp3_to_json(audio_to_text.py)
+The AI-Powered Course Assistant is an end-to-end Retrieval-Augmented Generation (RAG) application that transforms educational video content into a searchable knowledge base. The system enables users to ask natural language questions about course material and receive accurate, context-aware answers generated from the course transcripts instead of relying on the general knowledge of a Large Language Model.
 
-## Step 4 - Convert the json files to Vectors
-Use the file preprocess_json to convert the json files to a dataframe with Embeddings and save it as a joblib pickle(text_to_chunks.py) (read_chunks.py)
+The application extracts audio from educational videos, converts speech into text, generates semantic embeddings for transcript chunks, retrieves the most relevant information using semantic similarity search, and produces grounded responses with video references and timestamps.
 
-## Step 5 - Prompt generation and feeding to LLM
+---
 
-Read the joblib file and load it into the memory. Then create a relevant prompt as per the user query and feed it to the LLM(process_chunks.py)
+## Features
 
+- End-to-end RAG pipeline
+- Video-to-audio conversion
+- Automatic speech-to-text transcription
+- Semantic text chunking
+- Vector embedding generation
+- Semantic similarity search
+- Context-aware question answering
+- Prompt engineering
+- Timestamp-based responses
+- Video title and video number references
+- Hallucination reduction using retrieved context
 
+---
+
+## Tech Stack
+
+### Programming Language
+
+- Python
+
+### Generative AI
+
+- Retrieval-Augmented Generation (RAG)
+- Large Language Models (LLMs)
+- Prompt Engineering
+
+### Machine Learning
+
+- Sentence Transformers
+- Vector Embeddings
+- Cosine Similarity
+- Semantic Search
+
+### Natural Language Processing
+
+- OpenAI Whisper
+- Text Chunking
+- Speech-to-Text
+- Transcript Processing
+
+### Libraries
+
+- NumPy
+- Transformers
+- Sentence-Transformers
+- PyTorch
+- Requests
+- JSON
+- tqdm
+- python-dotenv
+
+### Tools
+
+- Git
+- GitHub
+- VS Code
+- Ollama (Local LLM)
+
+---
+
+## Project Workflow
+
+```
+Videos
+        ↓
+Audio Extraction
+        ↓
+Speech-to-Text (Whisper)
+        ↓
+Transcript Generation
+        ↓
+Semantic Text Chunking
+        ↓
+Embedding Generation
+        ↓
+Vector Storage
+        ↓
+Semantic Retrieval
+        ↓
+Prompt Construction
+        ↓
+Large Language Model
+        ↓
+Final Answer
+```
+
+---
+
+## Project Structure
+
+```
+AI-Course-Assistant/
+
+│── videos/
+│── audio/
+│── transcripts/
+│── chunks/
+│── embeddings/
+
+│── video_to_audio.py
+│── audio_to_text.py
+│── text_to_chunks.py
+│── read_chunks.py
+│── process_chunks.py
+
+│── requirements.txt
+│── README.md
+```
+
+---
+
+# How to Use
+
+## Step 1 – Collect Your Videos
+
+Place all course or educational video files inside the `videos/` directory.
+
+```
+videos/
+    lesson1.mp4
+    lesson2.mp4
+    lesson3.mp4
+```
+
+---
+
+## Step 2 – Convert Videos to Audio
+
+Run the `video_to_audio.py` script to extract audio from each video.
+
+```bash
+python video_to_audio.py
+```
+
+The extracted audio files will be saved in the `audio/` directory.
+
+---
+
+## Step 3 – Convert Audio to Transcript
+
+Run the `audio_to_text.py` script to convert audio into text using OpenAI Whisper.
+
+```bash
+python audio_to_text.py
+```
+
+Each transcript is stored as a JSON file containing the transcript, timestamps, video title, and metadata.
+
+---
+
+## Step 4 – Generate Semantic Embeddings
+
+Run the preprocessing scripts to split transcripts into semantic chunks and generate vector embeddings.
+
+```bash
+python text_to_chunks.py
+python read_chunks.py
+```
+
+The generated embeddings are stored for semantic retrieval during inference.
+
+---
+
+## Step 5 – Ask Questions
+
+Run the inference pipeline.
+
+```bash
+python process_chunks.py
+```
+
+The system performs the following operations:
+
+1. Converts the user query into an embedding.
+2. Performs semantic similarity search.
+3. Retrieves the most relevant transcript chunks.
+4. Constructs a prompt using the retrieved context.
+5. Sends the prompt to the Large Language Model.
+6. Returns an accurate answer with the corresponding video title and timestamp.
+
+---
+
+## Example
+
+### User Question
+
+```
+What is the purpose of the HTML input tag?
+```
+
+### Response
+
+```
+Video Number : 07
+
+Video Title : HTML Forms
+
+Timestamp : 02:14 – 02:45
+
+Answer:
+
+The HTML input tag is used inside forms to collect user input. Different input types such as text, email, password, radio buttons, and checkboxes allow users to enter various kinds of data.
+```
+
+---
+
+## Concepts Covered
+
+### Generative AI
+
+- Retrieval-Augmented Generation (RAG)
+- Prompt Engineering
+- Large Language Models
+- Context Grounding
+- Hallucination Reduction
+
+### Machine Learning
+
+- Sentence Embeddings
+- Dense Vector Representation
+- Semantic Similarity
+- Information Retrieval
+- Vector Search
+
+### Natural Language Processing
+
+- Speech-to-Text
+- Transcript Processing
+- Semantic Chunking
+- Query Processing
+
+### Software Engineering
+
+- Modular Python Development
+- Pipeline Design
+- API Integration
+- JSON Data Processing
+- End-to-End AI Workflow
+
+---
+
+## Future Improvements
+
+- FAISS or ChromaDB integration
+- Hybrid Search (BM25 + Vector Search)
+- FastAPI backend
+- Streamlit or React frontend
+- Multi-course support
+- Voice-based interaction
+- PDF document support
+- Docker deployment
+- Cloud deployment
+- Authentication and user profiles
+
+---
+
+## License
+
+This project is intended for educational purposes.
