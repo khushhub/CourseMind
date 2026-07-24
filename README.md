@@ -228,7 +228,6 @@ Video Title  : Entities, Code Tag and More on HTML
 Timestamp    : 05:32
 Explanation  : Modern CSS topics are introduced as part of the course roadmap.
 
-==================================================
 ---
 
 ## Concepts Covered
